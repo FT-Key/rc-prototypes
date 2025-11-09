@@ -1,0 +1,90 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradiente principal -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8b5cf6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradiente secundario para brillo -->
+    <linearGradient id="shineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </linearGradient>
+    
+    <!-- Sombra suave -->
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Fondo circular con gradiente -->
+  <circle cx="100" cy="100" r="90" fill="url(#mainGradient)" filter="url(#softShadow)"/>
+  
+  <!-- Anillo exterior decorativo -->
+  <circle cx="100" cy="100" r="85" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+  
+  <!-- Letra "P" estilizada (People) -->
+  <g transform="translate(45, 60)">
+    <path d="M 0 0 L 0 70 M 0 0 Q 30 0, 30 20 Q 30 40, 0 40" 
+          fill="none" 
+          stroke="white" 
+          stroke-width="12" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Letra "C" estilizada (Care/Customer) -->
+  <g transform="translate(105, 60)">
+    <path d="M 35 0 Q 0 0, 0 35 Q 0 70, 35 70" 
+          fill="none" 
+          stroke="white" 
+          stroke-width="12" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Corazón pequeño en el centro (Care) -->
+  <g transform="translate(100, 95)">
+    <path d="M 0 8 L -6 2 Q -8 0, -8 -3 Q -8 -7, -5 -7 Q -2 -7, 0 -4 Q 2 -7, 5 -7 Q 8 -7, 8 -3 Q 8 0, 6 2 Z" 
+          fill="white" 
+          opacity="0.9"/>
+  </g>
+  
+  <!-- Personas conectadas (símbolo de comunidad) -->
+  <g transform="translate(100, 145)" opacity="0.8">
+    <!-- Persona izquierda -->
+    <circle cx="-20" cy="-5" r="4" fill="white"/>
+    <path d="M -20 0 L -20 12 M -25 6 L -15 6" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    
+    <!-- Persona centro -->
+    <circle cx="0" cy="-8" r="5" fill="white"/>
+    <path d="M 0 -2 L 0 15 M -6 6 L 6 6" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Persona derecha -->
+    <circle cx="20" cy="-5" r="4" fill="white"/>
+    <path d="M 20 0 L 20 12 M 15 6 L 25 6" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    
+    <!-- Líneas de conexión -->
+    <line x1="-15" y1="5" x2="-5" y2="5" stroke="white" stroke-width="1.5" opacity="0.6"/>
+    <line x1="5" y1="5" x2="15" y2="5" stroke="white" stroke-width="1.5" opacity="0.6"/>
+  </g>
+  
+  <!-- Brillo superior -->
+  <ellipse cx="100" cy="60" rx="70" ry="40" fill="url(#shineGradient)" opacity="0.4"/>
+  
+  <!-- Puntos decorativos -->
+  <circle cx="40" cy="50" r="3" fill="white" opacity="0.5"/>
+  <circle cx="160" cy="60" r="2" fill="white" opacity="0.4"/>
+  <circle cx="50" cy="150" r="2.5" fill="white" opacity="0.6"/>
+  <circle cx="150" cy="140" r="2" fill="white" opacity="0.5"/>
+</svg>
