@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+/* Variables de color personalizadas */
+:root {
+  --color-primary: #3b82f6;
+  --color-primary-dark: #2563eb;
+  --color-secondary: #10b981;
+  --color-accent: #8b5cf6;
+  --color-dark: #0f172a;
+  --color-dark-light: #1e293b;
+}
+
+body {
+  @apply bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100 text-gray-800 min-h-screen;
+}
+
+.container {
+  @apply max-w-6xl mx-auto px-6 py-8;
+}
+
+/* Estilos para cards mejorados */
+.card {
+  @apply bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-200;
+}
+
+.card-hover {
+  @apply hover:-translate-y-1 hover:scale-[1.02];
+}
+
+/* Botones mejorados */
+.btn-primary {
+  @apply px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-xl 
+         font-semibold shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 
+         transition-all duration-200 hover:-translate-y-0.5;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-600 text-white rounded-xl 
+         font-semibold shadow-lg shadow-emerald-500/30 hover:shadow-xl hover:shadow-emerald-500/40 
+         transition-all duration-200 hover:-translate-y-0.5;
+}
+
+.btn-accent {
+  @apply px-6 py-3 bg-gradient-to-r from-violet-500 to-purple-600 text-white rounded-xl 
+         font-semibold shadow-lg shadow-violet-500/30 hover:shadow-xl hover:shadow-violet-500/40 
+         transition-all duration-200 hover:-translate-y-0.5;
+}
+
+.btn-outline {
+  @apply px-6 py-3 border-2 border-slate-300 text-slate-700 rounded-xl font-semibold 
+         hover:bg-slate-100 transition-all duration-200;
+}
+
+/* Inputs mejorados */
+.input-field {
+  @apply w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:border-blue-500 
+         focus:ring-4 focus:ring-blue-500/20 outline-none transition-all duration-200
+         bg-white text-gray-800;
+}
+
+.input-label {
+  @apply block text-sm font-semibold text-slate-700 mb-2;
+}
+
+/* Headers de sección */
+.section-header {
+  @apply text-3xl font-bold bg-gradient-to-r from-slate-900 to-slate-700 
+         bg-clip-text text-transparent;
+}
+
+.section-subheader {
+  @apply text-lg text-slate-600 mt-2;
+}
+
+/* Badges y estados */
+.badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold;
+}
+
+.badge-success {
+  @apply bg-emerald-100 text-emerald-700 border border-emerald-300;
+}
+
+.badge-warning {
+  @apply bg-amber-100 text-amber-700 border border-amber-300;
+}
+
+.badge-error {
+  @apply bg-red-100 text-red-700 border border-red-300;
+}
+
+.badge-info {
+  @apply bg-blue-100 text-blue-700 border border-blue-300;
+}
+
+/* Efectos de glassmorphism */
+.glass {
+  @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-2xl;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-500;
+}
