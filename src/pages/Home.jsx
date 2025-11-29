@@ -1,7 +1,7 @@
 import React from 'react';
 import PrototypeCard from '../components/PrototypeCard';
 
-export default function Home(){
+export default function Home() {
   return (
     <div className="space-y-8 animate-fade-in">
       {/* Header de bienvenida */}
@@ -10,7 +10,7 @@ export default function Home(){
           Prototipos de Sistemas de Gestión
         </h2>
         <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-          Explora las funcionalidades de nuestros sistemas People Care y Customer Care
+          Explora las funcionalidades del sistema Customer Care
         </p>
       </div>
 
@@ -27,11 +27,11 @@ export default function Home(){
             <p className="text-sm text-slate-600">Gestión de consultas y reclamos</p>
           </div>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <PrototypeCard 
-            title="Registrar Consulta" 
-            description="Formulario completo para registrar reclamos y consultas de clientes. Genera automáticamente un ticket único y envía confirmación." 
+          <PrototypeCard
+            title="Registrar Consulta"
+            description="Formulario completo para registrar reclamos y consultas de clientes."
             to="/customer/register"
             color="emerald"
             icon={
@@ -40,56 +40,15 @@ export default function Home(){
               </svg>
             }
           />
-          
-          <PrototypeCard 
-            title="Seguimiento y Cierre" 
-            description="Visualiza reclamos pendientes, registra soluciones aplicadas y cierra tickets. Notifica automáticamente al cliente sobre la resolución." 
+
+          <PrototypeCard
+            title="Seguimiento y Cierre"
+            description="Visualiza reclamos pendientes y cierra tickets."
             to="/customer/follow-close"
             color="emerald"
             icon={
               <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-              </svg>
-            }
-          />
-        </div>
-      </div>
-
-      {/* Sección People Care */}
-      <div className="space-y-4 pt-4">
-        <div className="flex items-center space-x-3">
-          <div className="w-12 h-12 bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
-            <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
-          </div>
-          <div>
-            <h3 className="text-2xl font-bold text-slate-800">People Care System</h3>
-            <p className="text-sm text-slate-600">Gestión de recursos humanos</p>
-          </div>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <PrototypeCard 
-            title="Registrar Empleado" 
-            description="Formulario de alta de empleados y docentes con validaciones automáticas de DNI y correo. Asigna identificador único." 
-            to="/people/register-employee"
-            color="violet"
-            icon={
-              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
-              </svg>
-            }
-          />
-          
-          <PrototypeCard 
-            title="Evaluar Desempeño" 
-            description="Sistema de evaluación con múltiples criterios y calificación final. Genera reporte automático y actualiza historial del empleado." 
-            to="/people/evaluate"
-            color="violet"
-            icon={
-              <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2m-6 9l2 2 4-4" />
               </svg>
             }
           />
@@ -107,8 +66,7 @@ export default function Home(){
           <div>
             <h4 className="font-semibold text-slate-800 mb-1">Nota sobre los prototipos</h4>
             <p className="text-sm text-slate-600 leading-relaxed">
-              Estos son prototipos no funcionales diseñados para demostración. Los datos ingresados no se almacenan en una base de datos real. 
-              El objetivo es mostrar la interfaz y flujo de interacción de cada caso de uso.
+              Estos son prototipos no funcionales diseñados para demostración. No almacenan datos reales.
             </p>
           </div>
         </div>

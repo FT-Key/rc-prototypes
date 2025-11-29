@@ -28,31 +28,21 @@ export default function TopNav() {
       ),
       active: loc.pathname.startsWith('/customer'),
       activeClass: 'bg-gradient-to-r from-emerald-500 to-teal-600 text-white shadow-lg shadow-emerald-500/30',
-    },
-    {
-      to: '/people/register-employee',
-      label: 'People Care',
-      icon: (
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-        </svg>
-      ),
-      active: loc.pathname.startsWith('/people'),
-      activeClass: 'bg-gradient-to-r from-violet-500 to-purple-600 text-white shadow-lg shadow-violet-500/30',
-    },
+    }
   ];
 
   return (
     <header className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 shadow-xl border-b border-slate-700">
       <div className="container mx-auto px-4 flex items-center justify-between py-4">
-        {/* Logo y título */}
+
+        {/* Logo */}
         <div className="flex items-center space-x-3">
           <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center shadow-lg">
-            <span className="text-white font-bold text-xl">PC</span>
+            <span className="text-white font-bold text-xl">CC</span>
           </div>
           <div>
-            <h1 className="text-xl font-bold text-white">Care Systems</h1>
-            <p className="text-xs text-slate-400">Prototipos Funcionales</p>
+            <h1 className="text-xl font-bold text-white">Customer Care</h1>
+            <p className="text-xs text-slate-400">Prototipo Funcional</p>
           </div>
         </div>
 
@@ -81,7 +71,7 @@ export default function TopNav() {
         </nav>
       </div>
 
-      {/* Menú móvil desplegable */}
+      {/* Menú móvil */}
       {menuOpen && (
         <div className="md:hidden border-t border-slate-700 bg-slate-800/80 backdrop-blur-lg">
           <nav className="flex flex-col p-3 space-y-2">
